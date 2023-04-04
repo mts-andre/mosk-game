@@ -10,6 +10,11 @@ function verificarDimensaoTela() {
 verificarDimensaoTela()
 
 function definirPosicao() {
+    // Removendo elemento anterior SE existente
+    if(window.document.getElementById('moska')) {
+        window.document.getElementById('moska').remove()
+    }
+
     // Criando valores random 
     var posX = Math.floor((Math.random() * lag)) - 90
     var posY = Math.floor((Math.random() * alt)) - 90
@@ -24,6 +29,7 @@ function definirPosicao() {
     mosk.style.left = posX + 'px'
     mosk.style.top = posY + 'px'
     mosk.style.position = 'absolute'
+    mosk.id = 'moska'
 
     window.document.body.appendChild(mosk)
 }
