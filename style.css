@@ -1,0 +1,25 @@
+.mosquito1 {
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito2 {
+    width: 70px;
+    height: 70px;
+}
+
+.mosquito3 {
+    width: 90px;
+    height: 90px;
+}
+
+/*
+    .ladoA {
+        transform: scale(1);
+    }
+*/
+
+
+.ladoB {
+    transform: rotateY(180deg)
+}
