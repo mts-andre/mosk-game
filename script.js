@@ -16,7 +16,7 @@ function posicionarElemento() {
         window.document.getElementById('moska').remove()
         
         if(life > 3) {
-
+            window.location.href = 'endGame.html'
         } else {
             window.document.getElementById('life' + life).src = 'img/coracao_vazio.png'
         life++
