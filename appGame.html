@@ -19,13 +19,17 @@
             <img id="life2" src="img/coracao_cheio.png">
             <img id="life3" src="img/coracao_cheio.png">
         </div>
-        <div class="crono"></div>
+        <div class="crono">
+            Tempo restante: <span id="cronoTempo"></span>
+        </div>
     </div>
     <!-- Javacript-->
     <script src="script.js"></script>
 
     <script>
-        setInterval(function() {
+        window.document.getElementById('cronoTempo').innerHTML = tempo
+        
+        var newMosk = setInterval(function() {
             posicionarElemento()
         }, 1000)
     </script>

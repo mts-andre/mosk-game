@@ -1,6 +1,7 @@
 var lag = 0
 var alt = 0
 var life = 1
+var tempo = 10
 
 function verificarTamanhoTela() {
     lag = window.innerWidth
@@ -10,6 +11,20 @@ function verificarTamanhoTela() {
 }
 
 verificarTamanhoTela()
+
+var crono = setInterval(function() {
+    tempo -= 1
+
+    if(tempo < 0) {
+        clearInterval(crono)
+        clearInterval(newMosk)
+        window.location.href = 'victory.html'
+    } else {
+        window.document.getElementById('cronoTempo').innerHTML = tempo
+    }
+
+    
+}, 1000)
 
 function posicionarElemento() {
     if(window.document.getElementById('moska')) {
