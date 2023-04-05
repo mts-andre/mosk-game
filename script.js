@@ -1,5 +1,6 @@
 var lag = 0
 var alt = 0
+var life = 1
 
 function verificarTamanhoTela() {
     lag = window.innerWidth
@@ -13,6 +14,13 @@ verificarTamanhoTela()
 function posicionarElemento() {
     if(window.document.getElementById('moska')) {
         window.document.getElementById('moska').remove()
+        
+        if(life > 3) {
+
+        } else {
+            window.document.getElementById('life' + life).src = 'img/coracao_vazio.png'
+        life++
+        }
     }
 
     var posX = Math.floor(Math.random() * lag) - 90
@@ -28,6 +36,9 @@ function posicionarElemento() {
     mosk.style.top = posY + 'px'
     mosk.style.position = 'absolute'
     mosk.id = 'moska'
+    mosk.onclick = function() {
+        this.remove()
+    }
 
     window.document.body.appendChild(mosk)
 
