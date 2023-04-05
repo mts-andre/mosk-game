@@ -1,6 +1,7 @@
 // Verificando dimensões da tela do usuário
 var lag = 0
 var alt = 0
+var life = 1
 
 function verificarDimensaoTela() {
     lag = window.screen.availWidth
@@ -13,6 +14,14 @@ function definirPosicao() {
     // Removendo elemento anterior SE existente
     if(window.document.getElementById('moska')) {
         window.document.getElementById('moska').remove()
+
+        if(life > 3) {
+            alert('Gameover')
+        }else {
+            window.document.getElementById('lif' + life).src = 'img/coracao_vazio.png'
+            life++
+        }
+        
     }
 
     // Criando valores random 
@@ -30,6 +39,9 @@ function definirPosicao() {
     mosk.style.top = posY + 'px'
     mosk.style.position = 'absolute'
     mosk.id = 'moska'
+    mosk.onclick = function() {
+        this.remove()
+    }
 
     window.document.body.appendChild(mosk)
 }
