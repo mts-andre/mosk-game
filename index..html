@@ -11,27 +11,36 @@
 
     <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Javacript-->
+    <script src="script.js"></script>
   </head>
-  <body onresize="verificarTamanhoTela()">
-    <div class="painel">
-        <div class="life">
-            <img id="life1" src="img/coracao_cheio.png">
-            <img id="life2" src="img/coracao_cheio.png">
-            <img id="life3" src="img/coracao_cheio.png">
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="lvl-opt">
+                            <option value="">Escolha a dificuldade</option>
+                            <option value="easy">Fácil</option>
+                            <option value="normal">Normal</option>
+                            <option value="hard">Dificil</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="crono">
-            Tempo restante: <span id="cronoTempo"></span>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-dark btn-lg" onclick="iniciar()">Iniciar jogo</button>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <!-- Javacript-->
-    <script>
-        window.document.getElementById('cronoTempo').innerHTML = tempo
-        
-        var newMosk = setInterval(function() {
-            posicionarElemento()
-        }, tempoAlterado)
-    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

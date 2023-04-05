@@ -2,6 +2,7 @@ var lag = 0
 var alt = 0
 var life = 1
 var tempo = 10
+var tempoAlterado = 1500
 
 function verificarTamanhoTela() {
     lag = window.innerWidth
@@ -82,4 +83,26 @@ function alternarDirecao() {
         case 1:
             return 'ladoB'
     }   
+}
+
+function iniciar() {
+    var lvlCh = window.document.getElementById('lvl-opt').value
+
+    if(lvlCh === '') {
+        alert('O jogo não pode ser iniciado sem que seja definido uma dificuldade para o desafio.')
+        return false
+    }
+
+    window.location.href = 'appGame.html?' + lvlCh
+}
+
+var lvlChoose = window.location.search
+lvlChoose = lvlChoose.replace('?', '')
+
+if(lvlChoose === 'easy') {
+    tempoAlterado = 1500
+} else if(lvlChoose === 'normal') {
+    tempoAlterado = 1200
+} else if(lvlChoose === 'hard') {
+    tempoAlterado = 900
 }
