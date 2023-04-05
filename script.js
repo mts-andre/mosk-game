@@ -11,6 +11,10 @@ function verificarTamanhoTela() {
 verificarTamanhoTela()
 
 function posicionarElemento() {
+    if(window.document.getElementById('moska')) {
+        window.document.getElementById('moska').remove()
+    }
+
     var posX = Math.floor(Math.random() * lag) - 90
     var posY = Math.floor(Math.random() * alt) - 90
 
@@ -23,6 +27,7 @@ function posicionarElemento() {
     mosk.style.left = posX + 'px'
     mosk.style.top = posY + 'px'
     mosk.style.position = 'absolute'
+    mosk.id = 'moska'
 
     window.document.body.appendChild(mosk)
 
