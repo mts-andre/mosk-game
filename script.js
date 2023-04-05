@@ -19,7 +19,7 @@ function posicionarElemento() {
 
     var mosk = window.document.createElement('img')
     mosk.src = 'img/mosca.png'
-    mosk.className = alternarTamanho()
+    mosk.className = alternarTamanho() + ' ' + alternarDirecao()
     mosk.style.left = posX + 'px'
     mosk.style.top = posY + 'px'
     mosk.style.position = 'absolute'
@@ -39,5 +39,16 @@ function alternarTamanho() {
             return 'mosk2'
         case 2:
             return 'mosk3'
+    }   
+}
+
+function alternarDirecao() {
+    var classe = Math.floor(Math.random() * 2)
+
+    switch(classe) {
+        case 0:
+            return 'ladoA'
+        case 1:
+            return 'ladoB'
     }   
 }

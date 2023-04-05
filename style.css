@@ -12,3 +12,11 @@
     width: 90px;
     height: 90px;
 }
+
+.ladoA {
+    transform: scale(1);
+}
+
+.ladoB {
+    transform: rotateY(180deg)
+}
