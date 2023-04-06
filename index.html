@@ -9,15 +9,43 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Stylesheet -->
+    <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Javacript-->
+    <script>
+        function iniciar() {
+            var lvlCh = window.document.getElementById('lvl-opt').value
+
+            if(lvlCh === '') {
+                alert('O jogo não pode ser iniciado sem que seja definido uma dificuldade para o desafio.')
+                return false
+            }
+
+            window.location.href = 'appGame.html?' + lvlCh
+        }
+    </script>
   </head>
   <body>
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <img src="img/game_over.png">
+                    <img src="img/game.png">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="lvl-opt">
+                            <option value="">Escolha a dificuldade</option>
+                            <option value="easy">Fácil</option>
+                            <option value="normal">Normal</option>
+                            <option value="hard">Dificil</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,7 +53,7 @@
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-dark btn-lg" onclick="window.location.href= 'index.html' ">Reiniciar</button>
+                    <button class="btn btn-dark btn-lg" onclick="iniciar()">Iniciar jogo</button>
                 </div>
             </div>
         </div>

@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    background: url(img/bg.jpg) no-repeat;
+    background: url(img/bg.jpg);
+    background-repeat:  no-repeat;
     background-size: 100%;
 }
 
@@ -23,7 +24,7 @@ body {
 }
 
 .ladoA {
-    transform: scale(1);
+    transform: scaleX(1);
 }
 
 .ladoB {
@@ -41,11 +42,12 @@ body {
     opacity: 0.7;
 }
 
-.life {
+.vidas {
     float: left;
 }
 
-.crono {
+.cronometro {
+    float: left;
     font-size: 20px;
     font-weight: bold;
 }

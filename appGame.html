@@ -11,22 +11,25 @@
 
     <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
   </head>
   <body onresize="verificarTamanhoTela()">
     <div class="painel">
-        <div class="life">
-            <img id="life1" src="img/coracao_cheio.png">
-            <img id="life2" src="img/coracao_cheio.png">
-            <img id="life3" src="img/coracao_cheio.png">
+        <div class="vidas">
+            <img id="vidas1" src="img/coracao_cheio.png">
+            <img id="vidas2" src="img/coracao_cheio.png">
+            <img id="vidas3" src="img/coracao_cheio.png">
         </div>
-        <div class="crono">
-            Tempo restante: <span id="cronoTempo"></span>
+        <div class="cronometro">
+            Tempo restante: <span id="cronometroTempo"></span>
         </div>
     </div>
     
     <!-- Javacript-->
     <script>
-        window.document.getElementById('cronoTempo').innerHTML = tempo
+        window.document.getElementById('cronometroTempo').innerHTML = tempo
         
         var newMosk = setInterval(function() {
             posicionarElemento()
